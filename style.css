@@ -1,0 +1,241 @@
+/* Reset e boas práticas */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background-color: #f8f8f9;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+header img {
+  max-width: 260px;
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Título principal */
+h1 {
+  color: #fa7236;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Introdução */
+section.intro {
+  text-align: justify;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+section.intro p {
+  margin-bottom: 0.5rem;
+}
+
+/* Passos */
+.steps .step {
+  margin-bottom: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.steps h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Botão de detalhes */
+.accordion {
+  background-color: #fa7236;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.accordion.active {
+  background-color: #ff5f03;
+}
+
+/* Painel de detalhes */
+.panel {
+  display: none;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  margin-top: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.panel p {
+  line-height: 1.5;
+}
+
+/* Botão principal */
+.button-primary {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 1rem;
+  padding: 1.3rem 2.5rem;
+  background: linear-gradient(135deg, #fa7236, #f9a77a);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* FAQ */
+.faq {
+  margin-top: 3rem;
+}
+
+.faq h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.faq ul {
+  list-style: none;
+  line-height: 1.8;
+}
+
+.faq li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+
+  a {
+    color: #0d7fc8;
+  }
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fafafa;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #e2e2e2;
+}
+
+footer a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #0ea2f9;
+}
+
+footer span {
+  color: #0d7fc8;
+}
+
+/* === Tema claro (padrão) === */
+body {
+  background: #f8f8f9;
+  color: #222;
+}
+
+/* === Tema escuro === */
+body.dark-mode {
+  background: #2a2a2a;
+  color: #f2f2f2;
+}
+
+body.dark-mode header {
+  background: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+/* Mostra apenas a logo original no modo claro */
+.logo-dark {
+  display: none;
+}
+
+body.dark-mode .logo-light {
+  display: none;
+}
+
+body.dark-mode .logo-dark {
+  display: inline;
+}
+
+body.dark-mode .steps .step {
+  background: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .accordion {
+  background-color: #fa7236;
+  color: white;
+}
+
+body.dark-mode .accordion.active {
+  background-color: #f86a26;
+}
+
+body.dark-mode .panel {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode footer {
+  background: #1e1e1e;
+  border-top: 1px solid #333;
+  color: #aaa;
+}
+
+/* Botão de alternância */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #fa7236;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}

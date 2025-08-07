@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Passo a passo acessível para encontrar e se candidatar às vagas da Nexa no portal Gupy." />
+  <meta name="author" content="Nexa • Lucas Code" />
+  <meta name="robots" content="index, follow" />
+  <title>Portal de Vagas Nexa</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./assets/img/logo.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header role="banner">
+    <img src="./assets/img/logo.png" alt="Logo da Nexa" class="logo-light" />
+    <img src="./assets/img/logo2.png" alt="Logo Nexa (Dark Mode)" class="logo-dark">
+    <button id="toggle-theme" class="theme-toggle">🌙 Modo Escuro</button>
+  </header>
+
+  <main id="conteudo-principal" role="main">
+    <h1>Bem-vindo(a) ao nosso Portal de Vagas!</h1>
+
+    <section class="intro" aria-labelledby="intro-heading">
+      <p>A Nexa é uma das maiores mineradoras do mundo e tem como propósito integrar a mineração a um mundo em constante transformação — sempre buscando o desenvolvimento sustentável.</p>
+      <p>Estamos em busca de pessoas com vontade de crescer, aprender e transformar o futuro com a gente. Quer fazer parte do time Nexa?</p>
+      <p>Confira abaixo o passo a passo para se candidatar às nossas vagas pelo portal Gupy:</p>
+    </section>
+
+    <section class="steps" aria-label="Passo a passo para candidatura">
+      <article class="step">
+        <h2>Passo 1 – Acesse o Portal da Nexa</h2>
+        <button class="accordion" aria-expanded="false" aria-controls="panel1">Ver detalhes</button>
+        <div class="panel" id="panel1" hidden>
+          <p>Você será redirecionado para a página oficial da Nexa no portal Gupy, onde as informações da empresa e todas as vagas disponíveis serão exibidas.</p>
+        </div>
+      </article>
+
+      <p><a class="button-primary" href="https://vempranexa.gupy.io/" target="_blank" rel="noopener noreferrer" aria-label="Ir para o portal de vagas da Nexa na Gupy">🔎 Acessar o Portal da Nexa</a></p>
+
+      <article class="step">
+        <h2>Passo 2 – Crie sua conta ou faça login</h2>
+        <button class="accordion" aria-expanded="false" aria-controls="panel2">Ver detalhes</button>
+        <div class="panel" id="panel2" hidden>
+          <p>
+            • No canto superior direito da tela, clique no <strong>Menu</strong> e depois em <strong>Entrar</strong>.<br>
+            • Se já tiver uma conta, é só fazer o login com seu e-mail e senha.<br>
+            • Caso ainda não tenha, clique em <strong>Criar conta</strong>, informe seu e-mail principal e crie uma senha fácil de lembrar, mas segura.
+          </p>
+        </div>
+      </article>
+
+      <article class="step">
+        <h2>Passo 3 – Encontre a vaga ideal para você</h2>
+        <button class="accordion" aria-expanded="false" aria-controls="panel3">Ver detalhes</button>
+        <div class="panel" id="panel3" hidden>
+          <p>
+            • Na página do Portal da Nexa, role até <strong>Nossas Oportunidades</strong>.<br>
+            • Todas as vagas disponíveis serão exibidas. Use os campos de busca para filtrar por nome, área, localização ou tipo de vaga. As opções vão se atualizar conforme você digita.
+          </p>
+        </div>
+      </article>
+
+      <article class="step">
+        <h2>Passo 4 – Clique na vaga e depois em “Candidatar-se”</h2>
+        <button class="accordion" aria-expanded="false" aria-controls="panel4">Ver detalhes</button>
+        <div class="panel" id="panel4" hidden>
+          <p>
+            • Clique na vaga de interesse para ver mais detalhes.<br>
+            • Na página da vaga, leia com atenção as informações sobre a função, requisitos e benefícios etc.<br>
+            • Depois, clique em <strong>Candidatar-se</strong> e siga os passos para efetivar a candidatura.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Dúvidas Frequentes</h2>
+      <ul>
+        <li><strong>💼 Não encontrou vaga?</strong> Tente novamente nos próximos dias. As vagas são atualizadas com frequência</li>
+        <li><strong>📩 Como saberei se fui chamado?</strong> A Gupy envia notificações por e-mail e pelo próprio site</li>
+        <li><strong>⚠️ Problemas no site?</strong> Acesse o <a href="https://suporte-candidatos.gupy.io/s/suporte" target="_blank" rel="noopener noreferrer">Suporte Gupy</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Desenvolvido por <a href="https://lucaslinkverse.vercel.app" target="_blank" rel="noopener noreferrer">Lucas <span>Code</span></a></p>
+  </footer>
+
+  <script>
+    // Seleciona todos os botões com a classe .accordion
+    const accordions = document.querySelectorAll('.accordion');
+
+    accordions.forEach((button) => {
+      button.addEventListener('click', function () {
+        // Alterna a classe "active" para mudar o estilo do botão
+        this.classList.toggle('active');
+
+        // Encontra o painel correspondente (o próximo elemento)
+        const panel = this.nextElementSibling;
+
+        // Alterna o display do painel
+        if (panel.style.display === 'block') {
+          panel.style.display = 'none';
+        } else {
+          panel.style.display = 'block';
+        }
+      });
+    });
+  </script>
+  <script>
+    const toggleBtn = document.getElementById('toggle-theme');
+    const body = document.body;
+
+    // Verifica preferência salva
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️ Modo Claro';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      toggleBtn.textContent = isDark ? '☀️ Modo Claro' : '🌙 Modo Escuro';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+
+</html>
