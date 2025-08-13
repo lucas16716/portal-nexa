@@ -100,10 +100,14 @@ section.intro p {
   margin-top: 1rem;
   border-radius: 8px;
   font-size: 0.95rem;
-}
 
-.panel p {
-  line-height: 1.5;
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    color: #f4a460;
+  }
 }
 
 /* Botão principal */
@@ -129,24 +133,22 @@ section.intro p {
 /* FAQ */
 .faq {
   margin-top: 3rem;
-}
 
-.faq h2 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style: none;
+    line-height: 1.8;
+  }
+  li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
 
-.faq ul {
-  list-style: none;
-  line-height: 1.8;
-}
-
-.faq li {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-
-  a {
-    color: #0d7fc8;
+    a {
+      color: #f4a460;
+    }
   }
 }
 
@@ -211,7 +213,7 @@ body.dark-mode .accordion {
 }
 
 body.dark-mode .accordion.active {
-  background-color: #f86a26;
+  background-color: #f47e4b;
 }
 
 body.dark-mode .panel {
@@ -229,13 +231,12 @@ body.dark-mode footer {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  padding: 0.6rem 1rem;
+  padding: 0.2rem 1.2rem;
   border: none;
-  border-radius: 8px;
-  background: #fa7236;
+  border-radius: 18px;
+  background: linear-gradient(115deg, #fa7236, #dd4d00);
   color: white;
-  font-weight: 600;
+  font-size: 1.2rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
 }
