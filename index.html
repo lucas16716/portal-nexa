@@ -19,14 +19,15 @@
   <header role="banner">
     <img src="./assets/img/logo.png" alt="Logo da Nexa" class="logo-light" />
     <img src="./assets/img/logo2.png" alt="Logo Nexa (Dark Mode)" class="logo-dark">
-    <button id="toggle-theme" class="theme-toggle">⏾</button>
+    <button id="toggle-theme" class="theme-toggle">◐</button>
   </header>
   <main id="conteudo-principal" role="main">
     <h1>Bem-vindo(a) ao nosso Portal de Vagas!</h1>
 
     <section class="intro" aria-labelledby="intro-heading">
       <p>A Nexa é uma das maiores mineradoras e produtoras de zinco do mundo, com mais de 60 anos de experiência operando e desenvolvendo ativos de mineração e metalurgia. Nosso propósito é integrar a mineração a um mundo em constante mudança como uma oportunidade para o desenvolvimento sustentável. Acesso nosso <a href="https://www.nexaresources.com/" target="_blank" rel="noopener noreferrer">site oficial</a> e saiba mais sobre nossa história.</p>
-      <p>Estamos em busca de pessoas com vontade de crescer, aprender e transformar o futuro com a gente. Quer fazer parte do time Nexa?</p>
+      <p>Estamos em busca de pessoas com vontade de crescer, aprender e transformar o futuro com a gente.
+        Quer fazer parte do time Nexa? Temos oportunidades de estágio, aprendiz e banco de talentos, com atuação em nossas unidades de São Paulo, Minas Gerais e Mato Grosso.</p>
       <p>Confira abaixo o passo a passo para se candidatar às nossas vagas pelo portal Gupy:</p>
     </section>
 
@@ -103,11 +104,13 @@
     </section>
 
     <section class="faq" aria-labelledby="faq-title">
-      <h2 id="faq-title">Dúvidas Frequentes</h2>
+      <h2 id="faq-title">FAQ (Dúvidas Frequentes)</h2>
       <ul>
-        <li><strong>💼 Não encontrou vaga?</strong> Tente novamente nos próximos dias. As vagas são atualizadas com frequência</li>
-        <li><strong>📩 Como saberei se fui chamado?</strong> A Gupy envia notificações por e-mail e pelo próprio site</li>
-        <li><strong>⚠️ Problemas no site?</strong> Acesse o <a href="https://suporte-candidatos.gupy.io/s/suporte" target="_blank" rel="noopener noreferrer">Suporte Gupy</a></li>
+        <li><strong>💼 Não encontrou vaga?</strong><br>Tente novamente nos próximos dias. As vagas são atualizadas com frequência</li>
+        <hr>
+        <li><strong>📩 Como saberei se fui chamado?</strong><br>A Gupy envia notificações por e-mail e pelo próprio site</li>
+        <hr>
+        <li><strong>⚠️ Problemas no site?</strong><br>Acesse o <a href="https://suporte-candidatos.gupy.io/s/suporte" target="_blank" rel="noopener noreferrer">Suporte Gupy</a></li>
       </ul>
     </section>
   </main>
@@ -149,7 +152,7 @@
     toggleBtn.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
       const isDark = body.classList.contains('dark-mode');
-      toggleBtn.textContent = isDark ? '☀' : '⏾';
+      toggleBtn.textContent = isDark ? '☀' : '◐';
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
   </script>
