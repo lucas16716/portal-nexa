@@ -59,12 +59,16 @@ main {
 }
 
 section.intro {
-  text-align: justify;
-  font-size: 1.1rem;
+  text-align: center;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
 
   p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  a {
+    color: #f4a460;
   }
 }
 
