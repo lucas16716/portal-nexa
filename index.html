@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="./assets/img/logo.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
   <header role="banner">
     <img src="./assets/img/logo.png" alt="Logo da Nexa" class="logo-light" />
     <img src="./assets/img/logo2.png" alt="Logo Nexa (Dark Mode)" class="logo-dark">
-    <button id="toggle-theme" class="theme-toggle">◐</button>
+    <button id="toggle-theme" class="theme-toggle"><i class="fi fi-sc-moon"></i></button>
   </header>
   <main id="conteudo-principal" role="main">
     <h1>Bem-vindo(a) ao nosso Portal de Vagas!</h1>
@@ -145,13 +146,13 @@
 
     if (localStorage.getItem('theme') === 'dark') {
       body.classList.add('dark-mode');
-      toggleBtn.textContent = '☀';
+      toggleBtn.innerHTML = '<i class="fi fi-sc-sun"></i>';
     }
 
     toggleBtn.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
       const isDark = body.classList.contains('dark-mode');
-      toggleBtn.textContent = isDark ? '☀' : '◐';
+      toggleBtn.innerHTML = isDark ? '<i class="fi fi-sc-sun"></i>' : '<i class="fi fi-sc-moon"></i>';
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
   </script>
