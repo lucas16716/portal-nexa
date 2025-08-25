@@ -2,6 +2,7 @@
 
 <div>
 
+[![License](https://img.shields.io/badge/Licença-MIT-yellow)](./LICENSE)&nbsp;&nbsp;
 [![Status](https://img.shields.io/badge/Status-Finalizado-orange)]()
 
 </div>
