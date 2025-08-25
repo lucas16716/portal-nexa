@@ -1,15 +1,12 @@
 <h1 align="center">Portal de Vagas • Nexa 💼</h1>
 
-Documentação em desenvolvimento...
-
-<!--
 <div>
 
 [![Status](https://img.shields.io/badge/Status-Finalizado-orange)]()
 
 </div>
 
-Página desenvolvida para divulgação temporária de oportunidades de estágio da Nexa durante eventos de empregabilidade, com o objetivo de atrair candidatos para vagas remanescentes de processos seletivos. O site foi construído com HTML e CSS, focando em acessibilidade, clareza e praticidade, facilitando o acesso às informações das vagas e o cadastro dos candidatos por meio de um formulário conectado, facilitando o encaminhamento dos interessados.
+> Projeto voluntário desenvolvido com o objetivo de orientar e facilitar o acesso de candidatos às oportunidades de emprego e estágio da Nexa pelo portal da **Gupy**. A proposta do site é **ser um guia simples, didático e acessível**, principalmente para o público operacional, ajudando a entender o que é a Nexa, como funciona o processo de candidatura e como realizar a inscrição nas vagas abertas.
 
 <p align="center">
   <a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -21,43 +18,40 @@ Página desenvolvida para divulgação temporária de oportunidades de estágio 
 <h2 id="projeto">PROJETO</h2>
 <h5>Acesse e confira o projeto em ação:</h5>
 
-- 🌐 <a href="https://estagiosnexa.vercel.app/">Vercel deploy</a>
-- 🖼️ Imagens do Projeto:
+- 🌐 <a href="https://portalnexa.vercel.app/">Vercel deploy</a>
 
 <div align="center">
-   <a target="_blank" href="https://estagiosnexa.vercel.app/">
-   <img href="https://estagiosnexa.vercel.app/" src="./assets/img/Captura de Tela.png">
-   </a>
-   <a target="_blank" href="https://estagiosnexa.vercel.app/">
-   <img href="https://lucaslinkverse.vercel.app/" src="./assets/img/Captura de Tela 2.png">
-   </a>
+   <img href="https://portalnexa.vercel.app/" src="./assets/img/Captura de Tela.png">
+   <img href="https://portalnexa.vercel.app/" src="./assets/img/Captura de Tela 2.png">
  </div>
 
 <h2 id="funcionalidades">FUNCIONALIDADES</h2>
 
-- 📢 Texto de apresentação do projeto;
-- 🔗 Links diretos para acesso ao PDF com a descrição das vagas de estágio e formulário para confirmação de candidatura;
-- 💡 Design simples e direta para facilitar a navegação;
-- 📱 Layout responsivo adaptado a todos os tipos de dispositivos.
+- 📢 Explicação clara sobre a Nexa e suas oportunidades;
+- 🔗 Link direto para o portal de vagas da Gupy;
+- ⬇️ Seções expansíveis (_dropdown/accordion_) com passo a passo simples e acessível sobre como se candidatar as vagas;
+- ❓ _FAQ_ (dúvidas frequentes);
+- 🌙 Modo escuro com _toggle button_;
+- 📱 Layout responsivo e adaptável a diferentes dispositivos.
 
 <h2 id="tecnologias-e-ferramentas">TECNOLOGIAS E FERRAMENTAS</h2>
 
-- **HTML5:** Estrutura e conteúdo do site;
-- **CSS3:** Estilização visual e responsividade;
-- **Git/GitHub:** Versionamento e hospedagem do código-fonte;
-- **Vercel:** Plataforma de deploy para o ambiente de produção.
+- **HTML5 →** Estrutura semântica e conteúdo do site;
+- **CSS3 →** Estilização, responsividade e design acessível;
+- **JavaScript →** Interatividade e recursos dinâmicos (toggle dark mode, accordions);
+- **Git/GitHub →** Versionamento e hospedagem do código-fonte;
+- **Vercel →** Deploy e disponibilização em produção.
 
 ---
 
 <h2 id="estruturação-do-projeto">ESTRUTURA DO PROJETO</h2>
 
 ```bash
-📁 nexa-estagios
+📁 Portal Vagas Nexa
 ├── 📁 assets
-│   ├── 📂 docs     # Documentos do projeto
-│   ├── 📂 img      # Imagens do projeto
+│   └── 📂 img      # Imagens do projeto
 ├── style.css        # Código CSS para estilização
-├── index.html       # Página principal do site
+├── index.html       # Página principal do site e JS
 └── README.md        # Documentação
 
 ```
@@ -67,13 +61,13 @@ Página desenvolvida para divulgação temporária de oportunidades de estágio 
 1. Clone este repositório no seu computador:
 
 ```
-git clone https://github.com/lucas16716/nexa-estagios.git
+git clone https://github.com/lucas16716/portal-nexa.git
 ```
 
 2. Abra o arquivo `index.html` no seu navegador:
 
 ```
-cd nexa-estagios
+cd portal-nexa
 open index.html
 ```
 
@@ -89,5 +83,4 @@ open index.html
 ---
 
 <h2>🧑🏻‍💻 AUTOR</h2>
-<p>Desenvolvido por <a href="https://lucaslinkverse.vercel.app/">Lucas Code</a> como colaboração para a participação da Nexa em eventos de empregabilidade</p>
--->
+<p>Desenvolvido por <a href="https://bio.site/lucascode">Lucas Code</a> com foco na experiência do usuário.</p>
