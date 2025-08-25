@@ -21,8 +21,8 @@
 - 🌐 <a href="https://portalnexa.vercel.app/">Vercel deploy</a>
 
 <div align="center">
-   <img href="https://portalnexa.vercel.app/" src="./assets/img/Captura de Tela.png">
-   <img href="https://portalnexa.vercel.app/" src="./assets/img/Captura de Tela 2.png">
+   <a href="https://portalnexa.vercel.app/"><img src="./assets/img/Captura de Tela.png"></a>
+   <a href="https://portalnexa.vercel.app/"><img src="./assets/img/Captura de Tela 2.png"></a>
  </div>
 
 <h2 id="funcionalidades">FUNCIONALIDADES</h2>
