@@ -176,14 +176,22 @@ footer {
   font-size: 0.9rem;
   color: #666;
   border-top: 1px solid #e2e2e2;
+  user-select: none;
 
   a {
+    display: inline-block;
     font-weight: bold;
     text-decoration: none;
     color: #0ea2f9;
+    transition: all 0.2s ease;
 
     span {
       color: #0d7fc8;
+    }
+
+    &:hover {
+      transform: translateY(-2.7px);
+      text-decoration: underline;
     }
   }
 }
