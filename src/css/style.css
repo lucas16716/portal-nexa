@@ -12,12 +12,61 @@ html {
 
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  background-color: #f8f8f9;
-  color: #222;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   line-height: 1.6;
+  background: #f8f8f9;
+  color: #222;
+
+  &.dark-mode {
+    background: #2a2a2a;
+    color: #f2f2f2;
+
+    header {
+      background: #1e1e1e;
+      border-bottom: 1px solid #333;
+    }
+
+    .steps {
+      .step {
+        background: #1e1e1e;
+        box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+      }
+    }
+
+    .accordion {
+      background-color: #fa7236;
+
+      &[aria-expanded="true"] {
+        background-color: #f47e4b;
+      }
+    }
+
+    .panel {
+      background-color: #2a2a2a;
+    }
+
+    .faq {
+      dt {
+        color: #f9a77a;
+      }
+    }
+
+    footer {
+      background: #1e1e1e;
+      border-top: 1px solid #333;
+      color: #aaa;
+    }
+
+    .logo-light {
+      display: none;
+    }
+
+    .logo-dark {
+      display: inline;
+    }
+  }
 }
 
 header {
@@ -25,9 +74,10 @@ header {
   border-bottom: 1px solid #ddd;
   text-align: center;
   padding: 1.5rem 0;
+  position: relative;
 
   img {
-    max-width: 260px;
+    max-width: 290px;
   }
 
   .theme-toggle {
@@ -39,7 +89,7 @@ header {
     border-radius: 14px;
     background: linear-gradient(190deg, #e67849, #dd4d00);
     color: #ffffff;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     cursor: pointer;
     line-height: 0;
   }
@@ -73,16 +123,30 @@ section.intro {
   }
 }
 
-.steps .step {
-  margin-bottom: 1rem;
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-
+.steps {
   h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    color: #fa7236;
+  }
+
+  ol {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .step {
+    margin-bottom: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
@@ -97,14 +161,13 @@ section.intro {
   font-weight: bold;
   margin-top: 0.5rem;
   transition: background-color 0.3s ease;
-}
 
-.accordion.active {
-  background-color: #ff5f03;
+  &[aria-expanded="true"] {
+    background-color: #ff5f03;
+  }
 }
 
 .panel {
-  display: none;
   padding: 1rem;
   background-color: #f0f0f0;
   margin-top: 1rem;
@@ -132,11 +195,11 @@ section.intro {
   border-radius: 8px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.button-primary:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  }
 }
 
 .faq {
@@ -149,23 +212,28 @@ section.intro {
     margin-bottom: 1.5rem;
   }
 
-  strong,
-  hr {
-    color: #fa7236;
-    border-color: #fa7236;
-  }
+  dl {
+    line-height: 1.8;
 
-  ul {
-    list-style: none;
-    line-height: 2;
-  }
-  li {
-    margin: 1rem 1rem;
-    font-size: 1rem;
-
-    a {
-      color: #f4a460;
+    hr {
+      border-color: #f4a460;
     }
+  }
+
+  dt {
+    font-weight: bold;
+    color: #fa7236;
+    margin-top: 1rem;
+  }
+
+  dd {
+    margin-left: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+
+  a {
+    color: #f4a460;
   }
 }
 
@@ -196,56 +264,6 @@ footer {
   }
 }
 
-/* Tema claro (padrão) */
-body {
-  background: #f8f8f9;
-  color: #222;
-}
-
-/* Tema escuro */
-body.dark-mode {
-  background: #2a2a2a;
-  color: #f2f2f2;
-
-  header {
-    background: #1e1e1e;
-    border-bottom: 1px solid #333;
-  }
-}
-
-/* Mostra apenas a logo original no modo claro */
 .logo-dark {
   display: none;
-}
-
-body.dark-mode .logo-light {
-  display: none;
-}
-
-body.dark-mode .logo-dark {
-  display: inline;
-}
-
-body.dark-mode .steps .step {
-  background: #1e1e1e;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
-}
-
-body.dark-mode .accordion {
-  background-color: #fa7236;
-  color: white;
-}
-
-body.dark-mode .accordion.active {
-  background-color: #f47e4b;
-}
-
-body.dark-mode .panel {
-  background-color: #2a2a2a;
-}
-
-body.dark-mode footer {
-  background: #1e1e1e;
-  border-top: 1px solid #333;
-  color: #aaa;
 }

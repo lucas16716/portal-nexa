@@ -4,161 +4,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="description" content="Passo a passo para encontrar e se candidatar às vagas da Nexa no portal Gupy" />
   <meta name="author" content="Nexa • Lucas Code" />
   <meta name="robots" content="index, follow" />
-  <title>Portal de Vagas Nexa</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./src/css/style.css" />
   <link rel="icon" href="./assets/img/logo.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-chubby/css/uicons-solid-chubby.css">
+  <title>Portal de Vagas Nexa</title>
 </head>
 
 <body>
-
-  <header role="banner">
-    <img src="./assets/img/logo.png" alt="Logo da Nexa" class="logo-light" />
-    <img src="./assets/img/logo2.png" alt="Logo Nexa (Dark Mode)" class="logo-dark">
-    <button id="toggle-theme" class="theme-toggle"><i class="fi fi-sc-moon"></i></button>
+  <header>
+    <img src="./assets/img/logo.png" alt="Logo da Nexa (modo claro)" class="logo-light" />
+    <img src="./assets/img/logo2.png" alt="Logo da Nexa (modo escuro)" class="logo-dark">
+    <button id="toggle-theme" class="theme-toggle" aria-pressed="false" aria-label="Alternar tema">
+      <i class="fi fi-sc-moon"></i>
+    </button>
   </header>
-  <main id="conteudo-principal" role="main">
+
+  <main id="conteudo-principal">
     <h1>Bem-vindo(a) ao nosso Portal de Vagas!</h1>
 
-    <section class="intro" aria-labelledby="intro-heading">
-      <p>A Nexa é uma das maiores mineradoras e produtoras de zinco do mundo, com mais de 60 anos de experiência operando e desenvolvendo ativos de mineração e metalurgia. Nosso propósito é integrar a mineração a um mundo em constante mudança como uma oportunidade para o desenvolvimento sustentável. Acesse nosso <a href="https://www.nexaresources.com/" target="_blank" rel="noopener noreferrer">site oficial</a> e saiba mais sobre nossa história.
+    <section class="intro">
+      <p>
+        A Nexa é uma das maiores mineradoras e produtoras de zinco do mundo, com mais de 60 anos de experiência. Nosso
+        propósito é integrar a mineração a um mundo em constante mudança como uma oportunidade para o desenvolvimento
+        sustentável.
+        Acesse nosso <a href="https://www.nexaresources.com/" target="_blank" rel="noopener noreferrer">site oficial</a>
+        e saiba mais sobre nossa história.
       </p>
-      <p>Estamos em busca de pessoas com vontade de crescer, aprender e transformar o futuro com a gente. Temos oportunidades de estágio, aprendiz e banco de talentos, com atuação em nossas unidades de São Paulo, Minas Gerais e Mato Grosso.
-        <br>Vamos fazer parte do time Nexa?
+      <p>
+        Estamos em busca de pessoas com vontade de crescer, aprender e transformar o futuro com a gente. Temos
+        oportunidades de estágio, aprendiz e banco de talentos em nossas unidades de São Paulo, Minas Gerais e Mato
+        Grosso.
       </p>
-      <p>Confira abaixo o passo a passo para se candidatar às nossas vagas pelo portal Gupy:</p>
+      <p>Vamos fazer parte do time Nexa?</p>
     </section>
 
     <section class="steps" aria-label="Passo a passo para candidatura">
-      <article class="step">
-        <h2>Passo 1 – Acesse o Portal da Nexa</h2>
-        <button class="accordion" aria-expanded="false" aria-controls="panel1">Ver detalhes</button>
-        <div class="panel" id="panel1" hidden>
-          <p>Você será redirecionado para a página oficial da Nexa no portal Gupy, onde as informações da empresa e todas as vagas disponíveis serão exibidas.</p>
-        </div>
-      </article>
+      <h2>Como se candidatar</h2>
+      <ol>
+        <li class="step">
+          <h3>Passo 1 – Acesse o Portal da Nexa</h3>
+          <button class="accordion" aria-expanded="false" aria-controls="panel1">Ver detalhes</button>
+          <div class="panel" id="panel1" hidden>
+            <p>Você será redirecionado para a página oficial da Nexa no portal Gupy, onde as vagas disponíveis serão exibidas.</p>
+          </div>
+        </li>
 
-      <p><a class="button-primary" href="https://vempranexa.gupy.io/" target="_blank" rel="noopener noreferrer" aria-label="Ir para o portal de vagas da Nexa na Gupy">🔎 Acessar o Portal da Nexa</a></p>
+        <p><a class="button-primary" href="https://vempranexa.gupy.io/" target="_blank" rel="noopener noreferrer">🔎 Acessar o Portal da Nexa</a></p>
 
-      <article class="step">
-        <h2>Passo 2 – Crie sua conta ou faça login</h2>
-        <button class="accordion" aria-expanded="false" aria-controls="panel2">Ver detalhes</button>
-        <div class="panel" id="panel2" hidden>
-          <p>
-            • No canto superior direito da tela, clique no <strong>Menu</strong> e depois em <strong>Entrar</strong>.<br>
-            • Se já tiver uma conta, é só fazer o login com seu e-mail e senha.<br>
-            • Caso ainda não tenha, clique em <strong>Criar conta</strong>, informe seu e-mail principal e crie uma senha fácil de lembrar, mas segura.
-          </p>
-        </div>
-      </article>
+        <li class="step">
+          <h3>Passo 2 – Crie sua conta ou faça login</h3>
+          <button class="accordion" aria-expanded="false" aria-controls="panel2">Ver detalhes</button>
+          <div class="panel" id="panel2" hidden>
+            <p>
+              • Clique no <strong>Menu</strong> e depois em <strong>Entrar</strong>, no canto superior direito.<br>
+              • Se já tiver uma conta, faça login normalmente.<br>
+              • Se não tiver, clique em <strong>Criar conta</strong>, informe seu e-mail e crie uma senha segura.
+            </p>
+          </div>
+        </li>
 
-      <article class="step">
-        <h2>Passo 3 – Encontre a vaga ideal para você</h2>
-        <button class="accordion" aria-expanded="false" aria-controls="panel3">Ver detalhes</button>
-        <div class="panel" id="panel3" hidden>
-          <p>
-            • Na página do Portal da Nexa, role até <strong>Nossas Oportunidades</strong>.<br>
-            • Todas as vagas disponíveis serão exibidas. Use os campos de busca para filtrar por nome, área, localização ou tipo de vaga. As opções vão se atualizar conforme você digita.
-          </p>
-        </div>
-      </article>
+        <li class="step">
+          <h3>Passo 3 – Encontre a vaga ideal</h3>
+          <button class="accordion" aria-expanded="false" aria-controls="panel3">Ver detalhes</button>
+          <div class="panel" id="panel3" hidden>
+            <p>
+              • Na página do portal da Nexa, role até <strong>Nossas Oportunidades</strong>.<br>
+              • Todas as vagas disponíveis serão exibidas. Use os campos de busca para filtrar por nome, área, localização ou tipo de vaga. As opções vão se atualizar conforme você digita.
+            </p>
+          </div>
+        </li>
 
-      <article class="step">
-        <h2>Passo 4 – Clique na vaga e depois em “Candidatar-se”</h2>
-        <button class="accordion" aria-expanded="false" aria-controls="panel4">Ver detalhes</button>
-        <div class="panel" id="panel4" hidden>
-          <p>
-            • Clique na vaga de interesse para ver mais detalhes.<br>
-            • Na página da vaga, leia com atenção as informações sobre a função, requisitos e benefícios etc.<br>
-            • Depois, clique em <strong>Candidatar-se</strong> e siga os passos para efetivar a candidatura.
-          </p>
-        </div>
-      </article>
-      <!-- SOBRE VAGAS DE ESTÁGIO E DE JOVEM APRENDIZ ESPECÍFICAS - AMBAS ENCERRADAS ATUALMENTE
-      <article class="step">
-        <h2>Sobre o programa Jovem Aprendiz</h2>
-        <button class="accordion" aria-expanded="false" aria-controls="panel4">Ver detalhes</button>
-        <div class="panel" id="panel5" hidden>
-          <p>
-            • <a href="https://vempranexa.gupy.io/jobs/7354275" target="_blank" rel="noopener noreferrer" aria-label="Ir para o programa Jovem Aprendiz da Nexa na Gupy">Clique aqui</a> para ser redirecionado ao programa Jovem Aprendiz da Nexa pela Gupy.<br>
-            • Com a página aberta, basta seguir os passos detalhados anteriormente e concluir a candidatura.<br>
-            • Não conseguiu iniciar a candidatura? Tente novamente nos próximos dias, o programa é atualizado com frequência.
-          </p>
-        </div>
-      </article>
-
-      <article class="step">
-        <h2>Sobre o programa de Estágios</h2>
-        <button class="accordion" aria-expanded="false" aria-controls="panel4">Ver detalhes</button>
-        <div class="panel" id="panel6" hidden>
-          <p>
-            • <a href="https://vempranexa.gupy.io/jobs/7668796" target="_blank" rel="noopener noreferrer" aria-label="Ir para o programa de estágios da Nexa na Gupy">Clique aqui</a> para ser redirecionado ao programa de estágios da Nexa pela Gupy.<br>
-            • Com a página aberta, basta seguir os passos detalhados anteriormente e concluir a candidatura.<br>
-            • Não conseguiu iniciar a candidatura? Tente novamente nos próximos dias, o programa é atualizado com frequência.
-          </p>
-        </div>
-      </article>
--->
+        <li class="step">
+          <h3>Passo 4 – Leia a descrição e candidate-se</h3>
+          <button class="accordion" aria-expanded="false" aria-controls="panel4">Ver detalhes</button>
+          <div class="panel" id="panel4" hidden>
+            <p>
+              • Clique na vaga desejada e leia com atenção as informações sobre a função, requisitos, benefícios e etc.<br>
+              • Depois clique em <strong>Candidatar-se</strong> e siga os passos para efetivar a candidatura.<br>
+              • Pronto! Você será notificado pela Gupy sobre a atualização do processo seletivo via e-mail e pelo próprio site.
+          </div>
+        </li>
+      </ol>
     </section>
 
-    <section class="faq" aria-labelledby="faq-title">
+    <section class="faq">
       <h2 id="faq-title">FAQ (Dúvidas Frequentes)</h2>
-      <ul>
-        <li><strong>💼 Não encontrou vaga?</strong><br>Tente novamente nos próximos dias. As vagas são atualizadas com frequência</li>
+      <dl>
+        <dt>💼 Não encontrou vaga?</dt>
+        <dd>Tente novamente nos próximos dias. As vagas são atualizadas com frequência.</dd>
         <hr>
-        <li><strong>📩 Como saberei se fui chamado?</strong><br>A Gupy envia notificações por e-mail e pelo próprio site</li>
+        <dt>📩 Como saberei se fui chamado?</dt>
+        <dd>A Gupy envia notificações sobre a atualização do processo seletivo por e-mail e pelo próprio site (Menu → Minhas candidaturas).</dd>
         <hr>
-        <li><strong>⚠️ Problemas no site?</strong><br>Acesse o <a href="https://suporte-candidatos.gupy.io/s/suporte" target="_blank" rel="noopener noreferrer">Suporte Gupy</a></li>
-      </ul>
+        <dt>⚠️ Problemas no site?</dt>
+        <dd>Acesse o <a href="https://suporte-candidatos.gupy.io/s/suporte" target="_blank" rel="noopener noreferrer">Suporte Gupy</a>.</dd>
+      </dl>
     </section>
   </main>
 
-  <footer role="contentinfo">
+  <footer>
     <p>&copy; 2025. Desenvolvido por <a href="https://bio.site/lucascode" target="_blank" rel="noopener noreferrer">Lucas <span>Code</span></a></p>
   </footer>
 
-  <script>
-    // Seleciona todos os botões com a classe .accordion
-    const accordions = document.querySelectorAll('.accordion');
-
-    accordions.forEach((button) => {
-      button.addEventListener('click', function () {
-        // Alterna a classe "active" para mudar o estilo do botão
-        this.classList.toggle('active');
-
-        // Encontra o painel correspondente (o próximo elemento)
-        const panel = this.nextElementSibling;
-
-        // Alterna o display do painel
-        if (panel.style.display === 'block') {
-          panel.style.display = 'none';
-        } else {
-          panel.style.display = 'block';
-        }
-      });
-    });
-  </script>
-  <script>
-    const toggleBtn = document.getElementById('toggle-theme');
-    const body = document.body;
-
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fi fi-sc-sun"></i>';
-    }
-
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      const isDark = body.classList.contains('dark-mode');
-      toggleBtn.innerHTML = isDark ? '<i class="fi fi-sc-sun"></i>' : '<i class="fi fi-sc-moon"></i>';
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-  </script>
+  <script src="./src/js/script.js" defer></script>
 </body>
 
 </html>

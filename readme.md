@@ -30,7 +30,7 @@
 
 - 📢 Explicação clara sobre a Nexa e suas oportunidades;
 - 🔗 Link direto para o portal de vagas da Gupy;
-- ⬇️ Seções expansíveis (_dropdown/accordion_) com passo a passo simples e acessível sobre como se candidatar as vagas;
+- ⬇️ Seções expansíveis com passo a passo simples e acessível sobre como se candidatar as vagas;
 - ❓ _FAQ_ (dúvidas frequentes);
 - 🌙 Modo escuro com _toggle button_;
 - 📱 Layout responsivo e adaptável a diferentes dispositivos.
@@ -50,10 +50,18 @@
 ```bash
 📁 Portal Vagas Nexa
 ├── 📁 assets
-│   └── 📂 img      # Imagens do projeto
-├── style.css        # Código CSS para estilização
-├── index.html       # Página principal do site e JS
-└── README.md        # Documentação
+│    └── 📂 img           # Todas as imagens do projeto
+│
+├── 📁 src
+│    ├── 📂 css
+│    │    └── style.css  # Código CSS
+│    │
+│    └── 📂 js
+│         └── script.js  # Código JavaScript
+│
+├── index.html           # Página principal do site
+├── LICENSE              # Licença do projeto
+└── README.md            # Documentação do projeto
 
 ```
 
@@ -87,4 +95,4 @@ open index.html
 <p>Este projeto está licenciado sob a licença MIT. Confira os detalhes na documentação oficial.</p>
 
 <h2>🧑🏻‍💻 AUTOR</h2>
-<p>Desenvolvido por <a href="https://bio.site/lucascode">Lucas Code</a> com foco na experiência do usuário.</p>
+<p>Desenvolvido por <a href="https://bio.site/lucascode">Lucas Code</a> visando a melhor experiência do usuário.</p>
