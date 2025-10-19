@@ -1,3 +1,52 @@
+/* ===================================================
+   STYLE.CSS - Portal de Vagas Nexa
+   ---------------------------------------------------
+   Estrutura:
+   1. SETTINGS .... :root variables, global reset
+   2. UTILITIES ... Visually hidden, skip link
+   3. LAYOUT ...... Header, Main, Footer
+   4. COMPONENTS .. Buttons, Accordion, Steps, FAQ
+   5. THEME ....... Dark Mode
+   =================================================== */
+
+/* --- 1. SETTINGS --- */
+:root {
+  /* Cores Primárias */
+  --color-primary: #fa7236;
+  --color-primary-dark: #ff5f03;
+  --color-primary-hover: #f47e4b;
+  --color-secondary: #f4a460;
+
+  /* Cores de Fundo */
+  --color-bg-light: #f8f8f9;
+  --color-bg-dark: #2a2a2a;
+  --color-bg-header-light: #fff;
+  --color-bg-header-dark: #1e1e1e;
+
+  /* Cores de Texto */
+  --color-text-light: #222;
+  --color-text-dark: #f2f2f2;
+  --color-text-footer-light: #666;
+  --color-text-footer-dark: #aaa;
+
+  /* Outras Cores */
+  --color-white: #fff;
+  --color-border-light: #ddd;
+  --color-border-dark: #333;
+
+  /* Tipografia */
+  --font-family-base: "Inter", Arial, Helvetica, sans-serif;
+  --line-height-base: 1.6;
+
+  /* Efeitos */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 6px 14px rgba(0, 0, 0, 0.06);
+  --shadow-lg-hover: 0 10px 22px rgba(0, 0, 0, 0.08);
+  --transition-fast: 0.3s ease;
+  --focus-outline: 3px solid #f9a77a80;
+}
+
+/* Reset Global */
 *,
 *::before,
 *::after {
@@ -11,148 +60,181 @@ html {
 }
 
 body {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-base);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  line-height: 1.6;
-  background: #f8f8f9;
-  color: #222;
-
-  &.dark-mode {
-    background: #2a2a2a;
-    color: #f2f2f2;
-
-    header {
-      background: #1e1e1e;
-      border-bottom: 1px solid #333;
-    }
-
-    .steps {
-      .step {
-        background: #1e1e1e;
-        box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
-      }
-    }
-
-    .accordion {
-      background-color: #fa7236;
-
-      &[aria-expanded="true"] {
-        background-color: #f47e4b;
-      }
-    }
-
-    .panel {
-      background-color: #2a2a2a;
-    }
-
-    .faq {
-      dt {
-        color: #f9a77a;
-      }
-    }
-
-    footer {
-      background: #1e1e1e;
-      border-top: 1px solid #333;
-      color: #aaa;
-    }
-
-    .logo-light {
-      display: none;
-    }
-
-    .logo-dark {
-      display: inline;
-    }
-  }
+  line-height: var(--line-height-base);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
-header {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+/* --- 2. UTILITIES --- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  z-index: 9999;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* --- 3. LAYOUT --- */
+.site-header {
+  background-color: var(--color-bg-header-light);
+  border-bottom: 1px solid var(--color-border-light);
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
   position: relative;
-
-  img {
-    max-width: 290px;
-  }
-
-  .theme-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.7rem;
-    border: none;
-    border-radius: 14px;
-    background: linear-gradient(190deg, #e67849, #dd4d00);
-    color: #ffffff;
-    font-size: 0.9rem;
-    cursor: pointer;
-    line-height: 0;
-  }
+  transition: background-color var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
-main {
+.site-header__logo {
+  max-width: 290px;
+}
+
+.site-header__logo--dark {
+  display: none;
+}
+
+.main-content {
   flex: 1;
   padding: 2rem 1rem;
   max-width: 800px;
   margin: 0 auto;
-
-  h1 {
-    color: #fa7236;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
 }
 
-section.intro {
+.main-content__title {
+  color: var(--color-primary);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fafafa;
+  font-size: 0.9rem;
+  color: var(--color-text-footer-light);
+  border-top: 1px solid #e2e2e2;
+  user-select: none;
+  transition: background-color var(--transition-fast),
+    border-color var(--transition-fast), color var(--transition-fast);
+}
+
+/* --- 4. COMPONENTS --- */
+/* Componente: Introdução */
+.intro {
   text-align: center;
   font-size: 1rem;
   margin-bottom: 1.5rem;
-
-  p {
-    margin-bottom: 0.7rem;
-  }
-
-  a {
-    color: #f4a460;
-  }
 }
 
+.intro p {
+  margin-bottom: 0.7rem;
+}
+
+.intro a {
+  color: var(--color-secondary);
+}
+
+/* Componente: Botão de Tema */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(190deg, #e67849, #dd4d00);
+  color: var(--color-white);
+  font-size: 0.9rem;
+  cursor: pointer;
+  line-height: 0;
+}
+
+/* Componente: Botão Primário */
+.button-primary {
+  display: block;
+  width: fit-content;
+  /* A mágica acontece aqui 👇 */
+  margin: 1.5rem auto;
+  padding: 1.3rem 2.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: var(--color-white);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.button-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg-hover);
+}
+
+/* Componente: Passos (Steps) */
 .steps {
-  h2 {
-    text-align: center;
-    font-size: 1.6rem;
-    margin-bottom: 1.2rem;
-    color: #fa7236;
-  }
-
-  ol {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  .step {
-    margin-bottom: 1rem;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-
-    h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-  }
+  margin-top: 2rem;
 }
 
+.steps h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  color: var(--color-primary);
+}
+
+.steps__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.steps__item {
+  margin-bottom: 1rem;
+  background-color: var(--color-bg-header-light);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.steps__item-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Componente: Accordion */
 .accordion {
-  background-color: #fa7236;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   padding: 0.6rem 1rem;
   border: none;
   border-radius: 8px;
@@ -160,11 +242,11 @@ section.intro {
   cursor: pointer;
   font-weight: bold;
   margin-top: 0.5rem;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-fast);
+}
 
-  &[aria-expanded="true"] {
-    background-color: #ff5f03;
-  }
+.accordion[aria-expanded="true"] {
+  background-color: var(--color-primary-dark);
 }
 
 .panel {
@@ -173,97 +255,120 @@ section.intro {
   margin-top: 1rem;
   border-radius: 8px;
   font-size: 0.95rem;
-
-  p {
-    line-height: 1.5;
-  }
-
-  a {
-    color: #f4a460;
-  }
+  transition: background-color var(--transition-fast);
 }
 
-.button-primary {
-  display: block;
-  width: fit-content;
-  margin: 0 auto 1rem;
-  padding: 1.3rem 2.5rem;
-  background: linear-gradient(135deg, #fa7236, #f9a77a);
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 8px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
-  }
+.panel p {
+  line-height: 1.5;
 }
 
+.panel a {
+  color: var(--color-secondary);
+}
+
+/* Componente: FAQ */
 .faq {
   margin-top: 3rem;
-
-  h2 {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #fa7236;
-    margin-bottom: 1.5rem;
-  }
-
-  dl {
-    line-height: 1.8;
-
-    hr {
-      border-color: #f4a460;
-    }
-  }
-
-  dt {
-    font-weight: bold;
-    color: #fa7236;
-    margin-top: 1rem;
-  }
-
-  dd {
-    margin-left: 0;
-    margin-bottom: 0.8rem;
-    font-size: 1rem;
-  }
-
-  a {
-    color: #f4a460;
-  }
 }
 
-footer {
+.faq h2 {
   text-align: center;
-  padding: 1rem;
-  background-color: #fafafa;
-  font-size: 0.9rem;
-  color: #666;
-  border-top: 1px solid #e2e2e2;
-  user-select: none;
-
-  a {
-    display: inline-block;
-    font-weight: bold;
-    text-decoration: none;
-    color: #0ea2f9;
-    transition: all 0.2s ease;
-
-    span {
-      color: #0d7fc8;
-    }
-
-    &:hover {
-      transform: translateY(-2.7px);
-      text-decoration: underline;
-    }
-  }
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
 }
 
-.logo-dark {
+.faq__list {
+  line-height: 1.8;
+}
+
+.faq__item {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.faq__item:last-child {
+  border-bottom: none;
+}
+
+.faq__question {
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-top: 1rem;
+}
+
+.faq__answer {
+  margin-left: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.faq a {
+  color: var(--color-secondary);
+}
+
+/* Componente: Link do Rodapé */
+.site-footer a {
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  color: #0ea2f9;
+  transition: transform 0.2s ease, text-decoration 0.2s ease;
+}
+
+.site-footer a span {
+  color: #0d7fc8;
+}
+
+.site-footer a:hover {
+  transform: translateY(-2.7px);
+  text-decoration: underline;
+}
+
+/* --- 5. THEME --- */
+/* Estilos do Dark Mode */
+body.dark-mode {
+  background: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+body.dark-mode .site-header {
+  background: var(--color-bg-header-dark);
+  border-bottom-color: var(--color-border-dark);
+}
+
+body.dark-mode .site-header__logo--light {
   display: none;
+}
+
+body.dark-mode .site-header__logo--dark {
+  display: inline;
+}
+
+body.dark-mode .steps__item {
+  background: var(--color-bg-header-dark);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .accordion {
+  background-color: var(--color-primary);
+}
+
+body.dark-mode .accordion[aria-expanded="true"] {
+  background-color: var(--color-primary-hover);
+}
+
+body.dark-mode .panel {
+  background-color: var(--color-bg-dark);
+}
+
+body.dark-mode .faq__question {
+  color: var(--color-secondary);
+}
+
+body.dark-mode .site-footer {
+  background: var(--color-bg-header-dark);
+  border-top-color: var(--color-border-dark);
+  color: var(--color-text-footer-dark);
 }

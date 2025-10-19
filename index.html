@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Passo a passo para encontrar e se candidatar às vagas da Nexa no portal Gupy" />
+  <meta name="description" content="Passo a passo para encontrar e se candidatar às vagas da Nexa no portal Gupy." />
   <meta name="author" content="Nexa • Lucas Code" />
   <meta name="robots" content="index, follow" />
   <link rel="stylesheet" href="./src/css/style.css" />
@@ -15,16 +15,19 @@
 </head>
 
 <body>
-  <header>
-    <img src="./assets/img/logo.png" alt="Logo da Nexa (modo claro)" class="logo-light" />
-    <img src="./assets/img/logo2.png" alt="Logo da Nexa (modo escuro)" class="logo-dark">
-    <button id="toggle-theme" class="theme-toggle" aria-pressed="false" aria-label="Alternar tema">
-      <i class="fi fi-sc-moon"></i>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <img src="./assets/img/logo.png" alt="Logo da Nexa (modo claro)" class="site-header__logo site-header__logo--light" />
+    <img src="./assets/img/logo2.png" alt="Logo da Nexa (modo escuro)" class="site-header__logo site-header__logo--dark">
+    <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Alternar para tema escuro">
+      <i class="fi fi-sc-moon theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"></i>
+      <i class="fi fi-sc-sun theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true" hidden></i>
     </button>
   </header>
 
-  <main id="conteudo-principal">
-    <h1>Bem-vindo(a) ao nosso Portal de Vagas!</h1>
+  <main id="main-content" class="main-content">
+    <h1 class="main-content__title">Bem-vindo(a) ao nosso Portal de Vagas!</h1>
 
     <section class="intro">
       <p>
@@ -42,21 +45,20 @@
       <p>Vamos fazer parte do time Nexa?</p>
     </section>
 
-    <section class="steps" aria-label="Passo a passo para candidatura">
-      <h2>Como se candidatar</h2>
-      <ol>
-        <li class="step">
-          <h3>Passo 1 – Acesse o Portal da Nexa</h3>
+    <section class="steps" aria-labelledby="steps-title">
+      <h2 id="steps-title">Como se candidatar</h2>
+      <ol class="steps__list">
+        <li class="steps__item">
+          <h3 class="steps__item-title">Passo 1 – Acesse o Portal da Nexa</h3>
           <button class="accordion" aria-expanded="false" aria-controls="panel1">Ver detalhes</button>
           <div class="panel" id="panel1" hidden>
             <p>Você será redirecionado para a página oficial da Nexa no portal Gupy, onde as vagas disponíveis serão exibidas.</p>
+
           </div>
         </li>
-
-        <p><a class="button-primary" href="https://vempranexa.gupy.io/" target="_blank" rel="noopener noreferrer">🔎 Acessar o Portal da Nexa</a></p>
-
-        <li class="step">
-          <h3>Passo 2 – Crie sua conta ou faça login</h3>
+        <a class="button-primary" href="https://vempranexa.gupy.io/" target="_blank" rel="noopener noreferrer">🔎 Acessar o Portal da Nexa</a>
+        <li class="steps__item">
+          <h3 class="steps__item-title">Passo 2 – Crie sua conta ou faça login</h3>
           <button class="accordion" aria-expanded="false" aria-controls="panel2">Ver detalhes</button>
           <div class="panel" id="panel2" hidden>
             <p>
@@ -67,8 +69,8 @@
           </div>
         </li>
 
-        <li class="step">
-          <h3>Passo 3 – Encontre a vaga ideal</h3>
+        <li class="steps__item">
+          <h3 class="steps__item-title">Passo 3 – Encontre a vaga ideal</h3>
           <button class="accordion" aria-expanded="false" aria-controls="panel3">Ver detalhes</button>
           <div class="panel" id="panel3" hidden>
             <p>
@@ -78,36 +80,41 @@
           </div>
         </li>
 
-        <li class="step">
-          <h3>Passo 4 – Leia a descrição e candidate-se</h3>
+        <li class="steps__item">
+          <h3 class="steps__item-title">Passo 4 – Leia a descrição e candidate-se</h3>
           <button class="accordion" aria-expanded="false" aria-controls="panel4">Ver detalhes</button>
           <div class="panel" id="panel4" hidden>
             <p>
               • Clique na vaga desejada e leia com atenção as informações sobre a função, requisitos, benefícios e etc.<br>
               • Depois clique em <strong>Candidatar-se</strong> e siga os passos para efetivar a candidatura.<br>
               • Pronto! Você será notificado pela Gupy sobre a atualização do processo seletivo via e-mail e pelo próprio site.
+            </p>
           </div>
         </li>
       </ol>
     </section>
 
-    <section class="faq">
+    <section class="faq" aria-labelledby="faq-title">
       <h2 id="faq-title">FAQ (Dúvidas Frequentes)</h2>
-      <dl>
-        <dt>💼 Não encontrou vaga?</dt>
-        <dd>Tente novamente nos próximos dias. As vagas são atualizadas com frequência.</dd>
-        <hr>
-        <dt>📩 Como saberei se fui chamado?</dt>
-        <dd>A Gupy envia notificações sobre a atualização do processo seletivo por e-mail e pelo próprio site (Menu → Minhas candidaturas).</dd>
-        <hr>
-        <dt>⚠️ Problemas no site?</dt>
-        <dd>Acesse o <a href="https://suporte-candidatos.gupy.io/s/suporte" target="_blank" rel="noopener noreferrer">Suporte Gupy</a>.</dd>
+      <dl class="faq__list">
+        <div class="faq__item">
+          <dt class="faq__question">💼 Não encontrou vaga?</dt>
+          <dd class="faq__answer">Tente novamente nos próximos dias. As vagas são atualizadas com frequência.</dd>
+        </div>
+        <div class="faq__item">
+          <dt class="faq__question">📩 Como saberei se fui chamado?</dt>
+          <dd class="faq__answer">A Gupy envia notificações sobre a atualização do processo seletivo por e-mail e pelo próprio site (Menu → Minhas candidaturas).</dd>
+        </div>
+        <div class="faq__item">
+          <dt class="faq__question">⚠️ Problemas no site?</dt>
+          <dd class="faq__answer">Acesse o <a href="https://suporte-candidatos.gupy.io/s/suporte" target="_blank" rel="noopener noreferrer">Suporte Gupy</a>.</dd>
+        </div>
       </dl>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025. Desenvolvido por <a href="https://bio.site/lucascode" target="_blank" rel="noopener noreferrer">Lucas <span>Code</span></a></p>
+  <footer class="site-footer">
+    <p>&copy; 2025. Desenvolvido por <a href="https://bio.site/lucascode" target="_blank" rel="noopener noreferrer" aria-label="Visitar o portfólio de Lucas Code">Lucas <span>Code</span></a></p>
   </footer>
 
   <script src="./src/js/script.js" defer></script>
