@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/Licença-MIT-blue)](./LICENSE)&nbsp;&nbsp;
 [![Status](https://img.shields.io/badge/Status-Finalizado-orange)]()&nbsp;&nbsp;
-[![Deploy Status](https://vercel.com/deployment-badge-url.svg)](https://portalnexa.vercel.app/)
+[![Deploy Status](https://img.shields.io/badge/Deploy-Oficial-black)](https://portalnexa.vercel.app/)
 
 </div>
 
