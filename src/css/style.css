@@ -177,7 +177,6 @@ body {
 .button-primary {
   display: block;
   width: fit-content;
-  /* A mágica acontece aqui 👇 */
   margin: 1.5rem auto;
   padding: 1.3rem 2.5rem;
   background: linear-gradient(
