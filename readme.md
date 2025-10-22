@@ -3,11 +3,12 @@
 <div>
 
 [![License](https://img.shields.io/badge/Licença-MIT-blue)](./LICENSE)&nbsp;&nbsp;
-[![Status](https://img.shields.io/badge/Status-Finalizado-orange)]()
+[![Status](https://img.shields.io/badge/Status-Finalizado-orange)]()&nbsp;&nbsp;
+[![Deploy Status](https://vercel.com/deployment-badge-url.svg)](https://portalnexa.vercel.app/)
 
 </div>
 
-> Projeto voluntário desenvolvido com o objetivo de orientar e facilitar o acesso de candidatos às oportunidades de emprego e estágio da Nexa pelo portal da **Gupy**. A proposta do site é **ser um guia simples, didático e acessível**, principalmente para o público operacional, ajudando a entender o que é a Nexa, como funciona o processo de candidatura e como realizar a inscrição nas vagas abertas.
+> Projeto voluntário desenvolvido com o objetivo de orientar e facilitar o acesso de candidatos às oportunidades de emprego e estágio da Nexa pelo portal da **Gupy**, reduzindo potenciais barreiras no processo de candidatura. A proposta do site é **ser um guia simples, didático e acessível**, principalmente para o público operacional, ajudando a entender o que é a Nexa, como funciona o processo de candidatura e como realizar a inscrição nas vagas abertas.
 
 <p align="center">
   <a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
