@@ -38,11 +38,11 @@
 
 <h2 id="tecnologias-e-ferramentas">TECNOLOGIAS E FERRAMENTAS</h2>
 
-- **HTML5 →** Estrutura semântica e conteúdo do site;
-- **CSS3 →** Estilização, responsividade e design acessível;
-- **JavaScript →** Interatividade e recursos dinâmicos (toggle dark mode, accordions);
-- **Git/GitHub →** Versionamento e hospedagem do código-fonte;
-- **Vercel →** Deploy e disponibilização em produção.
+- **HTML5 →** Estrutura semântica e acessível do conteúdo.
+- **CSS3 →** Estilização responsiva, Tema Escuro e organização modular (Variáveis CSS, BEM).
+- **JavaScript (ES6+) →** Interatividade dinâmica (Tema, Accordions) e manipulação segura do DOM.
+- **Git/GitHub →** Controle de versionamento e hospedagem do código-fonte.
+- **Vercel →** Deploy contínuo e disponibilização do site em produção.
 
 ---
 
