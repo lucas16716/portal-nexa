@@ -8,8 +8,6 @@
 
 </div>
 
-**Projeto voluntário** desenvolvido com o objetivo de **orientar e facilitar o acesso de candidatos às oportunidades de emprego e estágio da Nexa pelo portal da Gupy**, reduzindo potenciais barreiras no processo de candidatura. A proposta do site é **ser um guia simples, didático e acessível**, principalmente para o público operacional, ajudando a entender o que é a Nexa, como funciona o processo de candidatura e como realizar a inscrição nas vagas abertas.
-
 <p align="center">
   <a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -18,14 +16,10 @@
 </p>
 
 <h2 id="projeto">PROJETO</h2>
-<h5>Acesse e confira o projeto em ação:</h5>
 
-- 🌐 <a href="https://portalnexa.vercel.app/">Vercel deploy</a>
+**Projeto voluntário** desenvolvido com o objetivo de **orientar e facilitar o acesso de candidatos às oportunidades de emprego e estágio da Nexa pelo portal da Gupy**, reduzindo potenciais barreiras no processo de candidatura. A proposta do site é **ser um guia simples, didático e acessível**, principalmente para o público operacional, ajudando a entender o que é a Nexa, como funciona o processo de candidatura e como realizar a inscrição nas vagas abertas.
 
-<div align="center">
-   <a href="https://portalnexa.vercel.app/"><img src="./assets/img/Captura de Tela.png"></a>
-   <a href="https://portalnexa.vercel.app/"><img src="./assets/img/Captura de Tela 2.png"></a>
- </div>
+🌐 <a href="https://portalnexa.vercel.app/">Acesse o site</a>
 
 <h2 id="funcionalidades">FUNCIONALIDADES</h2>
 
