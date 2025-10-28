@@ -8,7 +8,7 @@
 
 </div>
 
-> Projeto voluntário desenvolvido com o objetivo de orientar e facilitar o acesso de candidatos às oportunidades de emprego e estágio da Nexa pelo portal da **Gupy**, reduzindo potenciais barreiras no processo de candidatura. A proposta do site é **ser um guia simples, didático e acessível**, principalmente para o público operacional, ajudando a entender o que é a Nexa, como funciona o processo de candidatura e como realizar a inscrição nas vagas abertas.
+**Projeto voluntário** desenvolvido com o objetivo de **orientar e facilitar o acesso de candidatos às oportunidades de emprego e estágio da Nexa pelo portal da Gupy**, reduzindo potenciais barreiras no processo de candidatura. A proposta do site é **ser um guia simples, didático e acessível**, principalmente para o público operacional, ajudando a entender o que é a Nexa, como funciona o processo de candidatura e como realizar a inscrição nas vagas abertas.
 
 <p align="center">
   <a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
