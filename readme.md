@@ -3,8 +3,7 @@
 <div>
 
 [![License](https://img.shields.io/badge/Licença-MIT-blue)](./LICENSE)&nbsp;&nbsp;
-[![Status](https://img.shields.io/badge/Status-Finalizado-orange)]()&nbsp;&nbsp;
-[![Deploy Status](https://img.shields.io/badge/Deploy-Oficial-black)](https://portalnexa.vercel.app/)
+[![Status](https://img.shields.io/badge/Status-Finalizado-orange)]()
 
 </div>
 
@@ -45,18 +44,20 @@
 ```bash
 📁 Portal Vagas Nexa
 ├── 📁 assets
-│    └── 📂 img           # Todas as imagens do projeto
-│
+│    └── 📂 img          # Imagens do projeto
+├── 📁 dist
+│    ├── 📂 css
+│    │    └── style.css  # Código CSS minificado
+│    └── 📂 js
+│         └── script.js  # Código JavaScript minificado
 ├── 📁 src
 │    ├── 📂 css
 │    │    └── style.css  # Código CSS
-│    │
 │    └── 📂 js
 │         └── script.js  # Código JavaScript
-│
 ├── index.html           # Página principal do site
-├── LICENSE              # Licença do projeto
-└── README.md            # Documentação do projeto
+├── LICENSE              # Licença
+└── README.md            # Documentação
 
 ```
 
